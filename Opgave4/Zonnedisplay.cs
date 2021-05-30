@@ -3,10 +3,10 @@ using System;
 
 namespace Opgave4
 {
-    public class Zonnedisplay : IObserver
+    public class ZonneDisplay : IObserver
     {
         private IObservable system;
-        public Zonnedisplay(IObservable system)
+        public ZonneDisplay(IObservable system)
         {
             this.system = system;
             system.AddObserver(this);
@@ -16,5 +16,4 @@ namespace Opgave4
             Console.WriteLine("new measurement: {0} Watt", power);
         }
     }
-
 }

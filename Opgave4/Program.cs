@@ -14,13 +14,12 @@ namespace Opgave4
         {
             // create solarpanel system -> model
 
-            IObservable systeem = new ZonnepaneelSysteem();
-            
+            IObservable systeem = new ZonnePaneelSysteem();
             
             IPaneelController controller = new PaneelController(systeem);
             
             // create a solarpanel display -> view
-            IObserver display = new Zonnedisplay(systeem);
+            IObserver display = new ZonneDisplay(systeem);
             
             // perform a few measurements
             for (int i = 0; i < 10; i++)

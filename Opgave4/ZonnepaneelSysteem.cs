@@ -4,12 +4,12 @@ using System.Collections.Generic;
 
 namespace Opgave4
 {
-    public class ZonnepaneelSysteem : IObservable
+    public class ZonnePaneelSysteem : IObservable
     {
         public int Wattage { get; set; }
         private List<IObserver> observers;
         private Random random;
-        public ZonnepaneelSysteem()
+        public ZonnePaneelSysteem()
         {
             observers = new List<IObserver>();
             random = new Random();
