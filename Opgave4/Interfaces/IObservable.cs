@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Opgave4.Interfaces
 {
-    interface IObservable
+    public interface IObservable
     {
     }
 }

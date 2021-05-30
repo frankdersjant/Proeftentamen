@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Opgave4.Interfaces
+﻿namespace Opgave4.Interfaces
 {
-    interface IObserver
+    public interface IObserver
     {
+        void Update(int Watts);
     }
 }
