@@ -1,13 +1,10 @@
 ﻿using Opgave4.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Opgave4
 {
-    public class ZonnepaneelSysteem
+    public class ZonnepaneelSysteem : IObservable
     {
         public int Wattage { get; set; }
         private List<IObserver> observers;
@@ -20,11 +17,9 @@ namespace Opgave4
 
         public void NieuweMeeting()
         {
-            // new measurement (between 300-400 Watt)
             Wattage = 300 + random.Next(100);
             NotifyObservers();
         }
-
        
         public void AddObserver(IObserver observer)
         {

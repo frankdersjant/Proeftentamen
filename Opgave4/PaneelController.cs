@@ -9,14 +9,14 @@ namespace Opgave4
 {
     public class PaneelController : IPaneelController
     {
-        public PaneelController()
+        private IObservable Zonnepaneel;
+        public PaneelController(IObservable zonnepaneel)
         {
-
+            this.Zonnepaneel = zonnepaneel;
         }
-
         public void NieuweMeeting()
         {
-            throw new NotImplementedException();
+            Zonnepaneel.NieuweMeeting();
         }
     }
 }
